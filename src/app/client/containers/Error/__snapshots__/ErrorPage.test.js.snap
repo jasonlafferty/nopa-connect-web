@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div>
+  <div />
+  <div
+    className="main-content"
+  >
+    <div>
+      <h1>
+        Page not found!
+      </h1>
+      <div>
+        This page is either no longer available or you have entered a wrong path.
+      </div>
+    </div>
+  </div>
+  <div />
+</div>
+`;

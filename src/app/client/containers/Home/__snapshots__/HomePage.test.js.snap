@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div>
+  <div />
+  <div
+    className="main-content"
+  >
+    Route
+  </div>
+  <div />
+</div>
+`;

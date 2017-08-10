@@ -1,0 +1,16 @@
+$spacer: 1rem;
+.button {
+  border-radius: 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  background: #F97056;
+  padding: $spacer $spacer*1.5;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  max-width: 20rem;
+  border: 0;
+  cursor: pointer;
+}

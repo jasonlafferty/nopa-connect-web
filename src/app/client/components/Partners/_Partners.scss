@@ -1,0 +1,24 @@
+.partners {
+  background-color: #2ABBF0;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      color: white;
+      font-weight: 900;
+    }
+
+    > div {
+      margin: 20px;
+      img {
+        height: 24px;
+      }
+    }
+  }
+}

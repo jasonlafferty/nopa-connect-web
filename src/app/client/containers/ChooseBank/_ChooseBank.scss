@@ -1,0 +1,29 @@
+.bank-list {
+
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  flex-wrap: wrap;
+  width: 400px;
+  justify-content: center;
+
+  > div {
+    background-color: white;
+    padding: 10px;
+    width: 159px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    display: flex;
+
+    > img {
+      filter: grayscale(100%);
+      &.selected {
+        filter: grayscale(0%);
+      }
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

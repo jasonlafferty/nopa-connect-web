@@ -1,0 +1,19 @@
+.errors {
+
+}
+
+.form-input {
+  margin: 20px;
+
+  label {
+    display: none;
+  }
+
+  input {
+    padding: 10px;
+    min-width: 300px;
+    border: 0;
+    border-radius:1px;
+    border-bottom: 3px solid lightgray;
+  }
+}
