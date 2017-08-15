@@ -9,7 +9,9 @@
     "lint": "node_modules/.bin/esw webpack.config.* app",
     "lint:watch": "npm run lint -- --watch",
     "test": "jest",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Issa Shabo <issa.shabo@zopa.com>",
   "dependencies": {
@@ -68,7 +70,8 @@
     "webpack": "^1.13.0",
     "webpack-dashboard": "^0.3.0",
     "webpack-dev-middleware": "1.6.1",
-    "webpack-hot-middleware": "^2.17.1"
+    "webpack-hot-middleware": "^2.17.1",
+    "@storybook/react": "^3.2.4"
   },
   "repository": {
     "type": "git",
