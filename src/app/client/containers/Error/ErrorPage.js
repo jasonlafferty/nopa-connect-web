@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Layout } from '../../components';
 
 const errors = {
@@ -12,6 +13,8 @@ const errors = {
   }
 };
 
+const errorsDefault = errors['500'];
+
 class ErrorPage extends React.Component {
 
   constructor(props) {
@@ -20,7 +23,7 @@ class ErrorPage extends React.Component {
   }
 
   printError (errCode) {
-    const error = Object.keys(errors).indexOf(errCode) > -1 ? errors[errCode] : errors['500'];
+    const error = errors[errCode] || errorsDefault;
     return (
       <div>
         <h1>{error.title}</h1>
@@ -38,9 +41,12 @@ class ErrorPage extends React.Component {
   }
 }
 
+ErrorPage.defaultProps = {
+  route: {}
+};
+
 ErrorPage.propTypes = {
-  route: React.PropTypes.object.isRequired
+  route: React.PropTypes.object
 };
 
 export default ErrorPage;
-
