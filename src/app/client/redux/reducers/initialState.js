@@ -1,8 +1,9 @@
 export default {
-  bankList: [{
+  bankList: [
+    {
     name: 'Barclays',
     logo: require('../../../static/images/Barclays.png')
-  },
+    },
     {
       name: 'Natwest',
       logo: require('../../../static/images/LogoNatwest.png')

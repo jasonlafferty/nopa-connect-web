@@ -1,8 +1,12 @@
 import {combineReducers} from 'redux';
-import bankReducer from './bankReducer';
+import bank from './bankReducer';
+import user from './userReducer';
+import transactions from './transactionsReducer';
 
 const rootReducer = combineReducers({
-  bankReducer
+  bank,
+  user,
+  transactions
 });
 
 export default rootReducer;
