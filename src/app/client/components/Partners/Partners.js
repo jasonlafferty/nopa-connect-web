@@ -1,38 +1,62 @@
 import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import partners from '../../constants/partners';
 
-const partners = [{
-    name: 'Airbnb',
-    logo: require('../../../static/images/Airbnb.png')
-  },
-  {
-    name: 'Metro',
-    logo: require('../../../static/images/Metro.png')
-  },
-  {
-    name: 'Pariti',
-    logo: require('../../../static/images/Pariti.png')
-  },
-  {
-    name: 'Unshackled',
-    logo: require('../../../static/images/Unshackled.png')
+const Section = styled.section`
+  background-color: #2ABBF0;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 50px;
+    flex-direction: column;
   }
-];
+`;
 
-const partnerLogos = partners.map((partner) =>
-    <div><img className="Nopa" alt={partner.name} src={partner.logo} /></div>
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Text = styled.span`
+  color: white;
+  font-weight: 900;
+`;
+
+const ImageContainer = styled(Container)`
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const Image = styled.img`
+  display: flex;
+  height: 24px;
+  padding: 30px;
+
+  @media (max-width: 768px) {
+    height: 40px;
+  }
+`;
+
+const Partners = () => (
+  <Section>
+    <Container>
+      <Text>Our partners:</Text>
+    </Container>
+    <ImageContainer>
+      {partners.map((partner) => (
+        <Image
+          key={partner.name}
+          alt={partner.name}
+          src={partner.logo}
+        />)
+      )}
+    </ImageContainer>
+  </Section>
 );
-
-const Partners = (props) => {
-  return (
-    <section className="partners">
-      <div>
-        <span>Our partners:</span>
-      </div>
-      <div>
-        {partnerLogos}
-      </div>
-    </section>
-  );
-};
 
 export default Partners;

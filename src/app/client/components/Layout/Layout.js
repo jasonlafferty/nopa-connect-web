@@ -1,28 +1,43 @@
-import React from 'react'
-import { Header, Footer, Partners } from '../'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Header, Footer, Partners } from '../';
 
 class Layout extends React.Component {
 
   componentDidMount () {
-    document.title = this.props.title;
+    document.title =  this.props.title;
   }
 
   render () {
+    const { showPartners, hideLogo } = this.props;
     return (
       <section>
-        <Header />
+        <Header hideLogo={hideLogo} />
         <div className="layout">
-          { this.props.children }
+          {this.props.children}
         </div>
-        <Partners />
+        {showPartners && <Partners />}
         <Footer />
       </section>
     );
   }
 }
 
-Layout.propTypes = {
-  title: React.PropTypes.string.isRequired
+Layout.defaultProps = {
+  children: null,
+  title: '',
+  showPartners: false,
+  hideLogo: false
 };
 
-export default Layout
+Layout.propTypes = {
+  children: React.PropTypes.oneOfType([
+    React.PropTypes.arrayOf(React.PropTypes.node),
+    React.PropTypes.node
+  ]),
+  title: React.PropTypes.string,
+  showPartners: React.PropTypes.bool,
+  hideLogo: React.PropTypes.bool
+};
+
+export default Layout;
